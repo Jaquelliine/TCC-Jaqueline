@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.lenovog40.tcc.CadastroResponsavel">
+    tools:context="com.example.lenovog40.tcc.CadastroMembroCuidador">
 
     <LinearLayout
-        android:layout_width="395dp"
-        android:layout_height="587dp"
+        android:layout_width="344dp"
+        android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
 
         <EditText
-            android:id="@+id/NomeR"
+            android:id="@+id/nomeCM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -22,15 +22,7 @@
             android:text="Nome Completo" />
 
         <EditText
-            android:id="@+id/cpfR"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:text="CPF" />
-
-        <EditText
-            android:id="@+id/emailR"
+            android:id="@+id/emailCM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -38,7 +30,7 @@
             android:text="E-mail" />
 
         <EditText
-            android:id="@+id/telefoneR"
+            android:id="@+id/telefoneCM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -46,32 +38,38 @@
             android:text="Telefone" />
 
         <EditText
-            android:id="@+id/senhaR"
+            android:id="@+id/enderecoCM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            android:text="Endereço" />
+
+        <EditText
+            android:id="@+id/cpfCM"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="CPF" />
+
+        <EditText
+            android:id="@+id/senhaCM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
             android:text="Senha" />
 
-        <RadioButton
-            android:id="@+id/radioButton2"
+        <Spinner
+            android:id="@+id/NivelAcessoCM"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sou responsavel pelos pacientes que cadastrarei" />
+            android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/cadastroR"
+            android:id="@+id/cadastroCM"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cadastrar" />
-
-        <TextView
-            android:id="@+id/logar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Já possui uma conta?"
-            android:textColor="@android:color/holo_blue_dark"
-            android:textSize="18sp" />
-
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
