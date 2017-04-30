@@ -13,6 +13,8 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard);
 
+        // bloco que irá fazer a chamada da classe cadastroMembroCuidador atraves do btnCuidadores
+
         Button btnCuidadores = (Button) findViewById(R.id.btnCuidadores);
 
         btnCuidadores.setOnClickListener(new View.OnClickListener(){
@@ -23,5 +25,25 @@ public class Dashboard extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+
+
+        Button btnMembros = (Button) findViewById(R.id.btnMembros);
+
+        btnMembros.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Dashboard.this,CadastroMembroCuidador.class);
+                startActivity(i);
+            }
+        });
+
+
+
+
+
+
+
     }
 }
