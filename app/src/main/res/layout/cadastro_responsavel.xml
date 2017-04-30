@@ -14,7 +14,7 @@
         tools:layout_editor_absoluteY="8dp">
 
         <EditText
-            android:id="@+id/NomeR"
+            android:id="@+id/nomeR"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -60,7 +60,7 @@
             android:text="Sou responsavel pelos pacientes que cadastrarei" />
 
         <Button
-            android:id="@+id/cadastroR"
+            android:id="@+id/cadastroRbutton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Cadastrar" />
