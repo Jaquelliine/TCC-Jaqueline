@@ -18,6 +18,10 @@ public class CadastroMembroCuidador extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                //criar uma condição para mander uma alerta(pop-up) pro usuario quando o cadastro for realizado com sucesso
+                // e só depois ele abre a outra tela.
+
                 Intent i = new Intent(CadastroMembroCuidador.this, Dashboard.class);
                 startActivity(i);
             }
