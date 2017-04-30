@@ -51,17 +51,17 @@ public class DB {
         Pessoa p = new Pessoa();
         String[] colunas = new String[]{"_id", "nome", "email", "endereco", "telefone", "cpf", "senha", "nivel_acesso"};
         Cursor cursor = db.query("pessoa", colunas, "_id=" + id, null, null, null, null);
-        if (cursor.getCount() == 0) {
+        if (cursor.getCount() != 0) {
             cursor.moveToFirst();
 
-            p.set_id(cursor.getInt(1));
-            p.setNome(cursor.getString(2));
-            p.setEmail(cursor.getString(3));
-            p.setEndereco(cursor.getString(4));
-            p.setTelefone(cursor.getDouble(5));
-            p.setCpf(cursor.getInt(6));
-            p.setSenha(cursor.getString(7));
-            p.setNivelAcesso(cursor.getInt(8) > 0);
+            p.set_id(cursor.getInt(0));
+            p.setNome(cursor.getString(1));
+            p.setEmail(cursor.getString(2));
+            p.setEndereco(cursor.getString(3));
+            p.setTelefone(cursor.getDouble(4));
+            p.setCpf(cursor.getInt(5));
+            p.setSenha(cursor.getString(6));
+            p.setNivelAcesso(cursor.getInt(7) > 0);
 
         }
         return p;
