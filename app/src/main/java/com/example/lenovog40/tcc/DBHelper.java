@@ -22,7 +22,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table pessoa( _id integer primary key autoincrement, nome text not null, telefone int not null, endereco text not null, email text not null, senha text not null, cpf int not null, nivel_acesso boolean not null )");
+        db.execSQL("create table pessoa( _id integer primary key autoincrement, nome text , telefone real , endereco text, email text, senha text, cpf int, nivel_acesso boolean)");
     }
 
     @Override
