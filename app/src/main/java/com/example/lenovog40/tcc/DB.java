@@ -10,7 +10,7 @@ import android.database.sqlite.SQLiteDatabase;
 public class DB {
     private SQLiteDatabase db;
     public DB (Context context){
-        BDCore
+        db
     }
 
 }
