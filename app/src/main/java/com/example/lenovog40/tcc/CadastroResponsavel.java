@@ -53,6 +53,7 @@ try {
     p.setNivelAcesso(radioButton2.isChecked());
 
 
+
     db.cadastraPessoa(p);
 } catch (SQLException e){
 
