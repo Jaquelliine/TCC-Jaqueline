@@ -20,7 +20,7 @@
             android:text="Pacientes" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/btnMembros"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Membros" />
