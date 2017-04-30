@@ -6,19 +6,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CadastroResponsavel extends AppCompatActivity {
+public class Dashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.cadastro_responsavel);
+        setContentView(R.layout.dashboard);
 
-        Button cadastroR = (Button) findViewById(R.id.cadastroR);
-        cadastroR.setOnClickListener(new View.OnClickListener(){
+        Button btnCuidadores = (Button) findViewById(R.id.btnCuidadores);
+
+        btnCuidadores.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(CadastroResponsavel.this, Login.class);
+                Intent i = new Intent(Dashboard.this,CadastroMembroCuidador.class);
                 startActivity(i);
             }
         });
