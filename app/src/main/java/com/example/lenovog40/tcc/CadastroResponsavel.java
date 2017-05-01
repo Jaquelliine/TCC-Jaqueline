@@ -19,10 +19,6 @@ public class CadastroResponsavel extends AppCompatActivity {
     RadioButton radioButton2;
 
 
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,34 +33,31 @@ public class CadastroResponsavel extends AppCompatActivity {
         senhaR = (TextView) findViewById(R.id.senhaR);
         radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
 
-        cadastroRbutton.setOnClickListener(new View.OnClickListener(){
+        cadastroRbutton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 DB db = new DB(CadastroResponsavel.this);
-try {
+                try {
 
-    Pessoa p = new Pessoa();
-    p.setNome(nomeR.getText().toString());
-    p.setCpf(Integer.getInteger(cpfR.getText().toString()));
-    p.setEmail(emailR.getText().toString());
-    p.setTelefone(Integer.getInteger(telefoneR.getText().toString()));
-    p.setSenha(senhaR.getText().toString());
-    p.setNivelAcesso(radioButton2.isChecked());
-
-
+                    Pessoa p = new Pessoa();
+                    p.setNome(nomeR.getText().toString());
+                    p.setCpf(Integer.parseInt(cpfR.getText().toString()));
+                    p.setEmail(emailR.getText().toString());
+                    p.setTelefone(Integer.parseInt(telefoneR.getText().toString()));
+                    p.setSenha(senhaR.getText().toString());
+                    p.setNivelAcesso(radioButton2.isChecked());
 
 
-    db.cadastraPessoa(p);
-} catch (SQLException e){
+                    db.cadastraPessoa(p);
+                } catch (SQLException e) {
 
-    System.out.println("Erro:"+e);
+                    System.out.println("Erro:" + e);
 
-}
+                }
 
                 Intent i = new Intent(CadastroResponsavel.this, Login.class);
                 startActivity(i);
-
 
 
                 Pessoa teste = db.carregaPessoa(1);
@@ -82,11 +75,8 @@ try {
         });
 
 
-
-
-
         TextView logar = (TextView) findViewById(R.id.logar);
-        logar.setOnClickListener(new View.OnClickListener(){
+        logar.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

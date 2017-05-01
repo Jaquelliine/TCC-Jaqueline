@@ -8,11 +8,11 @@ public class Pessoa {
 
     int _id;
     String nome;
-    double telefone =0;
+    double telefone;
     String endereco;
     String email;
     String senha;
-    int cpf =0;
+    int cpf;
     boolean nivelAcesso;
 
     public int get_id() {
